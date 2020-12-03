@@ -25,7 +25,7 @@ fprintf('Making Filters...');
 for m=1:M
     fprintf('|');
     hrir_ref = [hrirs_l(:, m), hrirs_r(:, m)];
-    [sos_list, gain, delay, hrir_modeled, mean_errors(m, :)] = hrir2sos(hrir_ref, fs, nSOS, false, true);
+    [sos_list, gain, delay, hrir_modeled, mean_errors(m, :)] = hrir2sos(hrir_ref, fs, nSOS, [], false, true);
     
     SOS_dataset(m).sos_list = sos_list;
     SOS_dataset(m).gain = gain;

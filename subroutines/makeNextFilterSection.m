@@ -29,7 +29,7 @@ else
     filtertype = 1; %peak
 end
 
-if limit_bandwith
+if size(limit_bandwith) ~= 0
     lf_limit = limit_bandwith(1);
     hf_limit = limit_bandwith(2);
 else
